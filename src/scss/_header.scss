@@ -1,0 +1,238 @@
+.header {
+    position: relative;
+
+    &__rowTop {
+        padding: map-get($spacers , 2 ) 0;
+        background-color: #1e2227;
+
+        &__wrapper {
+            display: flex;
+
+            @include media-breakpoint-only(xs) {
+                flex-direction: column;
+            }
+
+            /* Column Left*/
+            &__contact {
+                display: flex;
+                list-style: none;
+                align-items: center;
+                margin: map-get($spacers, 0);
+                margin-right: auto;
+                padding: map-get($spacers, 0 );
+
+                @include media-breakpoint-only(xs) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-bottom: map-get($spacers, 1);
+                }
+
+                li {
+
+                    &:nth-child(even) {
+
+                        &:before {
+                            content: '';
+                            display: inline-block;
+                            background-color: #495264;
+                            height: 15px;
+                            width: 1px;
+                            margin: 0 15px;
+                            vertical-align: middle;
+
+                            @include media-breakpoint-only(xs) { 
+                                content: unset;
+                            }
+                        }
+
+                        &:after {
+                            content: '';
+                            display: inline-block;
+                            background-color: #495264;
+                            height: 15px;
+                            width: 1px;
+                            margin: 0 15px;
+                            vertical-align: middle;
+
+                            @include media-breakpoint-only(xs) { 
+                                content: unset;
+                            }
+                        }
+
+                        
+                    }
+
+                    a {
+                        color: #8a99c0;
+                        font-weight: $font-weight-bold;
+                        text-decoration: none;
+                        transition: all 0.6s;
+                        @include responsive-font-size(14px);
+
+                        &:hover {
+                            color: $orange;
+                            transition: all 0.7s;
+
+                            i {
+                                color: $white;
+                                transition: all 0.7s;
+                            }
+                        }
+
+                        .fa-phone, .fa-envelope, .fa-map-marker-alt {
+                            color: $orange;
+                            transition: all 0.6s;
+                        }
+
+                    }
+
+                }
+
+            }
+            /* end Column Left*/
+
+            /* Column Right*/
+            &__redeSocial {
+                display: flex;
+                margin: map-get($spacers , 0 );
+                list-style: none;
+                padding: map-get($spacers, 0 );
+
+                @include media-breakpoint-only(xs) { 
+                    justify-content: flex-start; 
+                }
+
+                li {
+
+
+                    a {
+
+                        .fa-facebook-f, .fa-twitter , .fa-linkedin-in, .fa-instagram {
+                            color: #8a99c0;
+                            margin-left: map-get($spacers, 3);
+                        }
+                    }
+
+                }
+            }   
+            /* end Column Right*/
+        }
+
+    }
+
+    &__rowCenter {
+        position: relative;
+        background-color: #030f27;
+        padding: map-get($spacers, 4) 0 map-get($spacers, 5) ;
+
+        @include media-breakpoint-only(xs) {
+            padding: map-get($spacers, 5) 0;
+        }
+
+        &__wrapper {
+            display: flex;
+
+            .logo {
+                margin-right: auto;
+            }
+
+            .btn_budget {
+                background-color: $orange;
+                color: $white;
+                font-weight: $font-weight-bold;
+                text-transform: capitalize;
+                padding: map-get($spacers, 2 ) map-get($spacers, 4 );
+                @include responsive-font-size(16px);
+            }
+
+        }
+    }
+
+    &__rowBottom {
+        position: absolute;
+        top: 130px;
+        width: 100%;
+        z-index: 1;
+        transition: all 0.6s;
+
+        @include media-breakpoint-only(xs) {
+            top: 250px;
+        }
+
+        &__wrapper {
+            background-color: #f7f9fa;
+
+            .navbar {
+                border-radius: 5px;
+
+                .navbar-nav {
+                    .menu-item {
+                        margin: 10px;
+
+                        a {
+                            font-weight: $font-weight-bold;
+                            color: #030f27;
+                            // display: inline-block;
+                            text-decoration: none;
+                            transition: all 0.7s;
+                            border-bottom: solid 2px transparent;
+                            @include responsive-font-size(16px);
+
+                            &:hover::after{
+                                width: 100%;
+
+                                @include media-breakpoint-only(xs){
+                                    width: 20%;
+                                }
+                            }
+
+                            &:after {
+                                content: '';
+                                position: relative;
+                                top: 18px;
+                                display: block;
+                                width: 0;
+                                height: 4px;
+                                background-color: $orange;
+                                transition: width .5s;
+
+                                @include media-breakpoint-only(xs) {
+                                    top: unset;
+                                    height: 2px;
+                                }
+                            }
+                            
+                        }
+                    }
+                    
+                }
+
+                .shop-cart {
+                    display: flex;
+                    margin: map-get($spacers, 0 );
+                    list-style: none;
+
+                    li {
+                        margin: 0 map-get($spacers,  2);
+                    }
+                }
+
+            }
+
+        }
+    }
+
+}
+
+
+@keyframes mymove {
+    from {
+        transition: all 0.5s;
+        left: 0px;
+    }
+
+    to {
+        transition: all 0.5s;
+        right: 200px;
+    }
+}
