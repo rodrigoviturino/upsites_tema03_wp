@@ -161,7 +161,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-console.log(menu);
 </script>
 
 </body>
