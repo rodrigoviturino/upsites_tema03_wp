@@ -147,5 +147,22 @@
 <!-- <script src="./public/theme.min.js"></script> -->
 <!-- end Scripts -->
 
+<script>
+let menu = document.querySelector('.header__rowBottom');
+let headerClassList = menu.classList
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY >= 220) {
+        if(!headerClassList.contains('scrollHide')) {
+            headerClassList.add('scrollHide')
+        }
+    } else {
+        headerClassList.remove('scrollHide');
+    }
+});
+
+console.log(menu);
+</script>
+
 </body>
 </html>
