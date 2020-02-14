@@ -18,26 +18,32 @@
         <div class="container header__rowTop__wrapper">
 
                 <ul class="header__rowTop__wrapper__contact">
-
                     <li>
-                        <a href="#">
-                            <i class="fas fa-phone"></i>
-                            (11) 4130-3275
-                        </a>
+
+                        <?php if( get_theme_mod('up_telefone') ) : ?>
+                            <a href="#">
+                                <i class="fas fa-phone"></i>
+                                <?php echo get_theme_mod('up_telefone'); ?>
+                            </a>
+                        <?php endif; ?>
                     </li>
 
                     <li>
-                        <a href="mailto:contato@upsites.digital">
-                            <i class="fas fa-envelope"></i>
-                            contato@upsites.digital
-                        </a>
+                        <?php if(get_theme_mod('up_email') ) : ?>
+                            <a href="mailto:contato@upsites.digital">
+                                <i class="fas fa-envelope"></i>
+                                <?php echo get_theme_mod('up_email'); ?>
+                            </a>
+                        <?php endif; ?>
                     </li>
 
                     <li>
-                        <a href="https://goo.gl/maps/68pzk3qJfcJ2" target="_blank" rel="nofollow">
-                            <i class="fas fa-map-marker-alt"></i>
-                            R. Prof. Ernest Marcus, 65 - Pacaembu, São Paulo - SP - 01246-080
-                        </a>
+                        <?php if(get_theme_mod('up_endereco') ) : ?>
+                            <a href="https://goo.gl/maps/68pzk3qJfcJ2" target="_blank" rel="nofollow">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <?php echo get_theme_mod('up_endereco'); ?>
+                            </a>
+                        <?php endif; ?>
                     </li>
 
                 </ul>
@@ -45,27 +51,35 @@
                 <ul class="header__rowTop__wrapper__redeSocial">
 
                     <li>
-                        <a href="#">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
+                        <?php if(get_theme_mod('up_facebook')) : ?>
+                            <a href="<?php echo get_theme_mod('up_facebook'); ?>" target="_blank">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        <?php endif; ?>
                     </li>
 
                     <li>
+                    <?php if(get_theme_mod('up_twitter')) : ?>
                         <a href="#">
                             <i class="fab fa-twitter"></i>
                         </a>
+                    <?php endif; ?>
                     </li>
 
                     <li>
+                    <?php if(get_theme_mod('up_linkedin')) : ?>
                         <a href="#">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
+                    <?php endif; ?>
                     </li>
 
                     <li>
+                    <?php if(get_theme_mod('up_instagram')) : ?>
                         <a href="#">
                             <i class="fab fa-instagram"></i>
                         </a>
+                    <?php endif; ?>
                     </li>
 
                 </ul>

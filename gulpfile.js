@@ -84,7 +84,7 @@ function styles_login() {
 function scripts() {
     return gulp.src(['src/js/**/*.js'])
         .pipe(sourcemaps.init())
-        .pipe(rollup({ plugins: [resolve(), commonjs()] }, 'umd'))
+        // .pipe(rollup({ plugins: [resolve(), commonjs()] }, 'umd'))
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(concat('theme.js'))
         .pipe(rename({ suffix: '.min' }))
