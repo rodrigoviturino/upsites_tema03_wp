@@ -6,7 +6,11 @@ function up_header_customizer( $wp_customize ) {
     // Settings
     $wp_customize->add_setting('up_telefone', ['default' => '']);
     $wp_customize->add_setting('up_email', ['default' => '']);
+    $wp_customize->add_setting('up_link_email', ['default' => '']);
     $wp_customize->add_setting('up_endereco', ['default' => '']);
+
+    $wp_customize->add_setting('up_link_quote', ['default' => '']);
+    $wp_customize->add_setting('up_text_quote', ['default' => '']);
 
     $wp_customize->add_setting('up_facebook', ['default' => '']);
     $wp_customize->add_setting('up_twitter', ['default' => '']);
@@ -49,6 +53,50 @@ function up_header_customizer( $wp_customize ) {
                 ]
             )
         );
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+
+            'up_link_email',
+                [
+                    'label'=>'Link do Email',
+                    'section' => 'up_header_section',
+                    'settings' => 'up_link_email',
+                    'type' => 'text'  
+                ]
+            )
+        );
+
+ // Quote
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+
+            'up_link_quote',
+                [
+                    'label'=>'Link do Quote',
+                    'section' => 'up_header_section',
+                    'settings' => 'up_link_quote',
+                    'type' => 'text'  
+                ]
+            )
+        );
+
+    $wp_customize->add_control(
+        new WP_Customize_Control(
+            $wp_customize,
+
+            'up_text_quote',
+                [
+                    'label'=>'Texto do Quote',
+                    'section' => 'up_header_section',
+                    'settings' => 'up_text_quote',
+                    'type' => 'text'  
+                ]
+            )
+        );
+// end Quote
 
     $wp_customize->add_control(
         new WP_Customize_Control(

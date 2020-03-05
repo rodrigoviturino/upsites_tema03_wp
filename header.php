@@ -29,8 +29,8 @@
                     </li>
 
                     <li>
-                        <?php if(get_theme_mod('up_email') ) : ?>
-                            <a href="mailto:contato@upsites.digital">
+                        <?php if(get_theme_mod('up_email') && get_theme_mod('up_link_email') ) : ?>
+                            <a href="mailto:<?php echo get_theme_mod('up_link_email'); ?>">
                                 <i class="fas fa-envelope"></i>
                                 <?php echo get_theme_mod('up_email'); ?>
                             </a>
@@ -98,7 +98,11 @@
             </div>
 
             <!-- <a href="#" class="btn_budget"></a> -->
-            <button type="button" class=" btn_budget btn btn-lg rounded-pill d-block">Get a Quote</button>
+            <?php if( get_theme_mod('up_link_quote') && get_theme_mod('up_text_quote') ) : ?>
+                <a href="<?php echo get_theme_mod('up_link_quote'); ?>" class="btn_budget btn btn-lg rounded-pill d-block">
+                    <?php echo get_theme_mod('up_text_quote'); ?>
+                </a>
+            <?php endif; ?>
 
         </div>
     </div>

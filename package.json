@@ -20,6 +20,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-better-rollup": "^4.0.1",
     "gulp-clean-css": "^3.10.0",
+    "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-html-minifier": "^0.1.8",
     "gulp-imagemin": "^5.0.3",

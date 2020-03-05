@@ -6,10 +6,14 @@ function up_footer_customizer( $wp_customize ) {
     // Settings 
         // Informações
     $wp_customize->add_setting( 'up_about', [ 'default' => "" ]);
-    $wp_customize->add_setting( 'up_menu', [ 'default' => "" ]);
+    $wp_customize->add_setting( 'up_title_menu', [ 'default' => "" ]);
+    // $wp_customize->add_setting( 'up_menu', [ 'default' => "" ]);
     $wp_customize->add_setting( 'up_horario_funcionamento', [ 'default' => "" ]);
-    $wp_customize->add_setting( 'up_newsletter', [ 'default' => "" ]);
+    // $wp_customize->add_setting( 'up_newsletter', [ 'default' => "" ]);
     $wp_customize->add_setting( 'up_copyright', [ 'default' => "" ]);
+    
+    $wp_customize->add_setting( 'up_link_company', [ 'default' => "" ]);
+    $wp_customize->add_setting( 'up_text_company', [ 'default' => "" ]);
 
         // Rede social Footer
     $wp_customize->add_setting('up_facebook', ['default' => '']);
@@ -38,21 +42,36 @@ function up_footer_customizer( $wp_customize ) {
             ]
         )
     );
-    
+
     $wp_customize->add_control(
         new WP_Customize_Control (
             $wp_customize,
 
-            'up_menu',
+            'up_title_menu',
             [
-                'label' => 'Menu Footer',
+                'label' => 'Titulo da Empresa',
                 'section' => 'up_footer_section',
-                'settings' => 'up_menu',
-                'type' => 'text' ,
+                'settings' => 'up_title_menu',
+                'type' => 'text',
 
             ]
         )
     );
+    
+    // $wp_customize->add_control(
+    //     new WP_Customize_Control (
+    //         $wp_customize,
+
+    //         'up_menu',
+    //         [
+    //             'label' => 'Menu Footer',
+    //             'section' => 'up_footer_section',
+    //             'settings' => 'up_menu',
+    //             'type' => 'text' ,
+
+    //         ]
+    //     )
+    // );
     
     $wp_customize->add_control(
         new WP_Customize_Control (
@@ -69,20 +88,20 @@ function up_footer_customizer( $wp_customize ) {
         )
     );
     
-    $wp_customize->add_control(
-        new WP_Customize_Control (
-            $wp_customize,
+    // $wp_customize->add_control(
+    //     new WP_Customize_Control (
+    //         $wp_customize,
 
-            'up_newsletter',
-            [
-                'label' => 'Newsletter',
-                'section' => 'up_footer_section',
-                'settings' => 'up_newsletter',
-                'type' => 'text' ,
+    //         'up_newsletter',
+    //         [
+    //             'label' => 'Newsletter',
+    //             'section' => 'up_footer_section',
+    //             'settings' => 'up_newsletter',
+    //             'type' => 'text' ,
 
-            ]
-        )
-    );
+    //         ]
+    //     )
+    // );
     
     $wp_customize->add_control(
         new WP_Customize_Control (
@@ -93,6 +112,38 @@ function up_footer_customizer( $wp_customize ) {
                 'label' => 'Texto do Copyright',
                 'section' => 'up_footer_section',
                 'settings' => 'up_copyright',
+                'type' => 'text' ,
+
+            ]
+        )
+    );
+  
+    
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_link_company',
+            [
+                'label' => 'Link da Empresa',
+                'section' => 'up_footer_section',
+                'settings' => 'up_link_company',
+                'type' => 'text' ,
+
+            ]
+        )
+    );
+  
+    
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_text_company',
+            [
+                'label' => 'Link da Empresa',
+                'section' => 'up_footer_section',
+                'settings' => 'up_text_company',
                 'type' => 'text' ,
 
             ]

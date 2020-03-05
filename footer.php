@@ -24,7 +24,6 @@
                             <?php endif; ?>
                         </li>
     
-
                         <li>
                             <?php if(get_theme_mod('up_twitter')) : ?>
                                 <a href="#">
@@ -56,12 +55,17 @@
 
                 <!-- Column Menu -->
                 <div class="col-md-3 footer__main__menu">
-                    <h5 class="title">Useful Links</h5>
+
+                <?php if( get_theme_mod('up_title_menu') ) : ?>
+                    <h5 class="title">
+                        <?php echo get_theme_mod('up_title_menu'); ?>
+                    </h5>
+                <?php endif; ?>
 
                 <?php
                     if( has_nav_menu('main-menu') ) {
                         wp_nav_menu([
-                            'theme_location' => 'main-menu',
+                            'theme_location' => 'footer-menu',
                             'fallback_cb' => false,
                             'container_class' => null,
                             'container_id' => 'navbarResponsive',
@@ -123,8 +127,8 @@
         <div class="container">
             <div class="wrapper">
 
-            <?php if( get_theme_mod('up_copyright') ) : ?>
-                <p class="copy order-2 order-md-1"><?php echo get_theme_mod('up_copyright'); ?> &copy; <?php echo date('Y'); ?> - <span style="color:orangered;">Upsites</span></p>
+            <?php if( get_theme_mod('up_copyright') && get_theme_mod('up_text_company') ) : ?>
+                <p class="copy order-2 order-md-1"><?php echo get_theme_mod('up_copyright'); ?> &copy; <?php echo date('Y'); ?> - <span style="color:orangered;"><?php echo get_theme_mod('up_text_company'); ?></span></p>
             <?php endif; ?>
 
                 <ul class=" order-1 order-md-2">
