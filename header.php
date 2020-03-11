@@ -14,33 +14,33 @@
 
 <header class="header">
 
-    <div class="header__rowTop">
+    <div class="header__rowTop" style="background-color: <?php echo get_theme_mod('up_cor_fundo_redesocial_header'); ?>">
         <div class="container header__rowTop__wrapper">
 
                 <ul class="header__rowTop__wrapper__contact">
                     <li>
 
                         <?php if( get_theme_mod('up_telefone') ) : ?>
-                            <a href="#">
-                                <i class="fas fa-phone"></i>
+                            <a href="#" style="color: <?php echo get_theme_mod('up_cor_text_telefone_header'); ?>">
+                                <i class="fas fa-phone" style="color: <?php echo get_theme_mod('up_cor_icone_telefone_header'); ?>"></i>
                                 <?php echo get_theme_mod('up_telefone'); ?>
                             </a>
                         <?php endif; ?>
                     </li>
 
                     <li>
-                        <?php if(get_theme_mod('up_email') && get_theme_mod('up_link_email') ) : ?>
-                            <a href="mailto:<?php echo get_theme_mod('up_link_email'); ?>">
-                                <i class="fas fa-envelope"></i>
-                                <?php echo get_theme_mod('up_email'); ?>
+                        <?php if(get_theme_mod('up_link_email') && get_theme_mod('up_texto_email') ) : ?>
+                            <a href="mailto:<?php echo get_theme_mod('up_link_email'); ?>" style="color: <?php echo get_theme_mod('up_cor_text_email_header'); ?>">
+                                <i class="fas fa-envelope" style="color: <?php echo get_theme_mod('up_cor_icone_email_header'); ?>"></i>
+                                <?php echo get_theme_mod('up_texto_email'); ?>
                             </a>
                         <?php endif; ?>
                     </li>
 
                     <li>
                         <?php if(get_theme_mod('up_endereco') ) : ?>
-                            <a href="https://goo.gl/maps/68pzk3qJfcJ2" target="_blank" rel="nofollow">
-                                <i class="fas fa-map-marker-alt"></i>
+                            <a href="https://goo.gl/maps/68pzk3qJfcJ2" target="_blank" rel="nofollow" style="color: <?php echo get_theme_mod('up_cor_text_local_header'); ?>">
+                                <i class="fas fa-map-marker-alt" style="color: <?php echo get_theme_mod('up_cor_icone_local_header'); ?>"></i>
                                 <?php echo get_theme_mod('up_endereco'); ?>
                             </a>
                         <?php endif; ?>
@@ -89,15 +89,22 @@
 
     </div>
 
-    <div class="header__rowCenter">
+    <div class="header__rowCenter" style="background-color: <?php echo get_theme_mod('up_cor_principal_header'); ?>">
         <div class="container header__rowCenter__wrapper">
+
             <div class="logo">
-                <a href="<?php bloginfo(url); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?> './public/images/logo.png' " alt="" class="img-fluid">
-                </a>
+                <?php 
+                    $img_logo = get_template_directory_uri() . '/public/images/logo.png';
+                    if(get_theme_mod('up_img_logo') ) : 
+                ?>
+                    <a href="<?php bloginfo(url); ?>">
+                        <img src="<?php echo $img_logo = get_theme_mod('up_img_logo'); ?>" alt="" class='img-fluid'>
+                    </a>
+                <?php endif; ?>
             </div>
 
             <!-- <a href="#" class="btn_budget"></a> -->
+            
             <?php if( get_theme_mod('up_link_quote') && get_theme_mod('up_text_quote') ) : ?>
                 <a href="<?php echo get_theme_mod('up_link_quote'); ?>" class="btn_budget btn btn-lg rounded-pill d-block">
                     <?php echo get_theme_mod('up_text_quote'); ?>
@@ -108,7 +115,7 @@
     </div>
 
     <div class="header__rowBottom">
-        <div class="container header__rowBottom__wrapper rounded js-scroll">
+        <div class="container header__rowBottom__wrapper rounded js-scroll" style="background-color: <?php echo get_theme_mod('up_cor_fundo_menu');?>" >
             
             <nav class="navbar navbar-expand-lg navbar-light">
 

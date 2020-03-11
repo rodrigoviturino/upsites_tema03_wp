@@ -78,7 +78,7 @@
             .navbar {
                 display: flex;
                 list-style: none;
-                padding: 0;
+                padding: map-get($spacers, 0 );
                 margin: map-get($spacers, 3) 0;
 
                 @include media-breakpoint-only(xs) {
@@ -89,6 +89,7 @@
                 li {
                     line-height: 25px;
                     padding: 0;
+                    list-style: none;
                     display: inline-block !important; 
                     text-align: right;
                     padding-right: map-get($spacers, 2);

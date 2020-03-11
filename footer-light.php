@@ -1,6 +1,7 @@
 
 
-<footer class="footer">
+<footer class="footer bg-secondary">
+
     <section class="footer__main">
         <div class="container">
             <div class="row">
@@ -16,37 +17,37 @@
                     <?php endif; ?>
 
                     <ul class="redeSocial">
+                        <?php if(get_theme_mod('up_facebook_footer')) : ?>
                         <li>
-                            <?php if(get_theme_mod('up_facebook')) : ?>
-                                <a href="<?php echo get_theme_mod('up_facebook'); ?>" target="_blank">
+                                <a href="<?php echo get_theme_mod('up_facebook_footer'); ?>" target="_blank">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
-                            <?php endif; ?>
                         </li>
+                            <?php endif; ?>
     
+                            <?php if(get_theme_mod('up_twitter_footer')) : ?>
                         <li>
-                            <?php if(get_theme_mod('up_twitter')) : ?>
-                                <a href="#">
+                                <a href="<?php echo get_theme_mod('up_twitter_footer'); ?>">
                                     <i class="fab fa-twitter"></i>
                                 </a>
-                            <?php endif; ?>
                         </li>
+                            <?php endif; ?>
 
+                            <?php if(get_theme_mod('up_linkedin_footer')) : ?>
                         <li>
-                            <?php if(get_theme_mod('up_linkedin')) : ?>
-                                <a href="#">
+                                <a href="<?php echo get_theme_mod('up_linkedin_footer'); ?>">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
-                            <?php endif; ?>
                         </li>
+                            <?php endif; ?>
 
+                            <?php if(get_theme_mod('up_instagram_footer')) : ?>
                         <li>
-                            <?php if(get_theme_mod('up_instagram')) : ?>
-                                <a href="#">
+                                <a href="<?php echo get_theme_mod('up_instagram_footer'); ?>">
                                     <i class="fab fa-instagram"></i>
                                 </a>
-                            <?php endif; ?>
                         </li>
+                            <?php endif; ?>
                         
                     </ul>
 

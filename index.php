@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main style="padding-top: 100px;" class="bg-secondary">
+<main style="padding: 120px 0 100px;" class="bg-secondary">
     <div class="container">
         <div class="row justify-content-cente text-center">
             
@@ -17,4 +17,13 @@
     </div>
 </main>
 
-<?php get_footer(); ?>
+
+<?php 
+
+if( get_theme_mod('up_select_footer') == 'dark' ) {
+    get_footer('dark');
+} else {
+    get_footer('light');
+}
+
+?>

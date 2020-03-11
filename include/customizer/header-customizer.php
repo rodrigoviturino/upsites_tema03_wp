@@ -5,9 +5,12 @@ function up_header_customizer( $wp_customize ) {
 
     // Settings
     $wp_customize->add_setting('up_telefone', ['default' => '']);
-    $wp_customize->add_setting('up_email', ['default' => '']);
+    $wp_customize->add_setting('up_texto_email', ['default' => '']);
     $wp_customize->add_setting('up_link_email', ['default' => '']);
     $wp_customize->add_setting('up_endereco', ['default' => '']);
+
+    // Logo
+    $wp_customize->add_setting('up_img_logo', ['default' => '']);
 
     $wp_customize->add_setting('up_link_quote', ['default' => '']);
     $wp_customize->add_setting('up_text_quote', ['default' => '']);
@@ -25,7 +28,9 @@ function up_header_customizer( $wp_customize ) {
 
     // Controllers
 
-    // Infos
+    // Row Top
+    
+        // Telefone
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -40,15 +45,16 @@ function up_header_customizer( $wp_customize ) {
         )
     );
 
+        // Email
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
 
-            'up_email',
+            'up_texto_email',
                 [
-                    'label'=>'Email',
+                    'label'=>'Insira o Email',
                     'section' => 'up_header_section',
-                    'settings' => 'up_email',
+                    'settings' => 'up_texto_email',
                     'type' => 'text'  
                 ]
             )
@@ -60,44 +66,15 @@ function up_header_customizer( $wp_customize ) {
 
             'up_link_email',
                 [
-                    'label'=>'Link do Email',
+                    'label'=>'Confirme novamente o Email',
                     'section' => 'up_header_section',
                     'settings' => 'up_link_email',
                     'type' => 'text'  
                 ]
             )
         );
-
- // Quote
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-
-            'up_link_quote',
-                [
-                    'label'=>'Link do Quote',
-                    'section' => 'up_header_section',
-                    'settings' => 'up_link_quote',
-                    'type' => 'text'  
-                ]
-            )
-        );
-
-    $wp_customize->add_control(
-        new WP_Customize_Control(
-            $wp_customize,
-
-            'up_text_quote',
-                [
-                    'label'=>'Texto do Quote',
-                    'section' => 'up_header_section',
-                    'settings' => 'up_text_quote',
-                    'type' => 'text'  
-                ]
-            )
-        );
-// end Quote
-
+    
+        // Endereço
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
@@ -112,7 +89,55 @@ function up_header_customizer( $wp_customize ) {
             )
         );
 
-    // Rede Social 
+
+    // Row Center
+        // Logo
+        $wp_customize->add_control(
+            new WP_Customize_Image_Control(
+                $wp_customize,
+    
+                'up_img_logo',
+                    [
+                        'label'=>'Logo Header',
+                        'section' => 'up_header_section',
+                        'settings' => 'up_img_logo',
+                        'mime_type' => 'image'
+                    ]
+                )
+            );
+
+        //Quote
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+    
+                'up_link_quote',
+                    [
+                        'label'=>'Link do Call to Action',
+                        'section' => 'up_header_section',
+                        'settings' => 'up_link_quote',
+                        'type' => 'text'  
+                    ]
+                )
+            );
+    
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+    
+                'up_text_quote',
+                    [
+                        'label'=>'Texto do Quote',
+                        'section' => 'up_header_section',
+                        'settings' => 'up_text_quote',
+                        'type' => 'text'  
+                    ]
+                )
+            );
+
+
+    // Row Bottom
+        // Rede Social 
     $wp_customize->add_control(
         new WP_Customize_Control(
             $wp_customize,
