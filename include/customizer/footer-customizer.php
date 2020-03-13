@@ -24,9 +24,13 @@ function up_footer_customizer( $wp_customize ) {
     $wp_customize->add_setting( 'up_email_empresa', [ 'default' => '' ]);
     $wp_customize->add_setting( 'up_link_email_empresa', [ 'default' => '' ]);
     
-    $wp_customize->add_setting( 'up_copyright', [ 'default' => '' ]);
-
+    $wp_customize->add_setting( 'up_text_copyright', [ 'default' => '' ]);
+    $wp_customize->add_setting( 'up_text_company_copyright', [ 'default' => '' ]);
+    // Termo de uso e Politica
+    $wp_customize->add_setting( 'up_text_termo_politica', [ 'default' => '' ]);
     $wp_customize->add_setting( 'up_link_termo_politica', [ 'default' => '' ]);
+    $wp_customize->add_setting( 'up_text_termo_use', [ 'default' => '' ]);
+    $wp_customize->add_setting( 'up_link_termo_use', [ 'default' => '' ]);
 
     // SELECT FOOTER
     $wp_customize->add_setting('up_select_footer', ['default' => '']);
@@ -226,22 +230,96 @@ function up_footer_customizer( $wp_customize ) {
         )
     );
     
+    // Copyright
     $wp_customize->add_control(
         new WP_Customize_Control (
             $wp_customize,
 
-            'up_copyright',
+            'up_text_copyright',
             [
-                'label' => 'Texto do Copyright',
+                'label' => ' Texto do Copyright',
                 'section' => 'up_footer_section',
-                'settings' => 'up_copyright',
+                'settings' => 'up_text_copyright',
+                'type' => 'text' ,
+
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_text_company_copyright',
+            [
+                'label' => 'Empresa para adicionar no Copyright',
+                'section' => 'up_footer_section',
+                'settings' => 'up_text_company_copyright',
                 'type' => 'text' ,
 
             ]
         )
     );
 
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
 
+            'up_text_termo_politica',
+            [
+                'label' => 'Texto para o Termo de Política',
+                'section' => 'up_footer_section',
+                'settings' => 'up_text_termo_politica',
+                'type' => 'text',
+
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_link_termo_politica',
+            [
+                'label' => 'Escolha a pagina para o Termo de Política',
+                'section' => 'up_footer_section',
+                'settings' => 'up_link_termo_politica',
+                'type' => 'dropdown-pages',
+
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_text_termo_use',
+            [
+                'label' => 'Texto do Termo de Uso',
+                'section' => 'up_footer_section',
+                'settings' => 'up_text_termo_use',
+                'type' => 'text',
+
+            ]
+        )
+    );
+    $wp_customize->add_control(
+        new WP_Customize_Control (
+            $wp_customize,
+
+            'up_link_termo_use',
+            [
+                'label' => 'Escolha a pagina para o Termo de Uso',
+                'section' => 'up_footer_section',
+                'settings' => 'up_link_termo_use',
+                'type' => 'dropdown-pages',
+
+            ]
+        )
+    );
+
+
+
+    // Exemplos
     // SELECT
     $wp_customize->add_control(
         new WP_Customize_Control (

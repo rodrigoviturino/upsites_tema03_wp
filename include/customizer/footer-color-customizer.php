@@ -31,11 +31,22 @@ function up_color_footer_customizer( $wp_customize ) {
         $wp_customize->add_setting( 'up_cor_hover_icon_insta_footer', ['default' => "#F35C27" ]);        
 
         // Coluna Menu
-        $wp_customize->add_setting( 'up_cor_titulo_menu', ['default' => "#FFF" ]);        
-        $wp_customize->add_setting( 'up_cor_hover_titulo_menu', ['default' => "#F35C27" ]);        
-
+        $wp_customize->add_setting( 'up_cor_titulo_menu_footer', ['default' => "#FFF" ]);        
+        $wp_customize->add_setting( 'up_cor_itens_menu_footer', ['default' => "#8A99C0" ]);
+        $wp_customize->add_setting( 'up_cor_hover_itens_menu_footer', ['default' => "#F35C27" ]);
+        
+        // Coluna Newsletter
+        $wp_customize->add_setting( 'up_cor_title_newsletter_footer', ['default' => "#FFF" ]);
+        $wp_customize->add_setting( 'up_cor_button_newsletter_footer', ['default' => "#F35C27" ]);
+        $wp_customize->add_setting( 'up_cor_hover_button_newsletter_footer', ['default' => "#F35C27" ]);
+        $wp_customize->add_setting( 'up_cor_hover_text_button_newsletter_footer', ['default' => "#FFF" ]);
 
         $wp_customize->add_setting( 'up_cor_fundo_menu', ['default' => "#f7f9fa" ]);
+        
+        // Sessão Copyright
+        $wp_customize->add_setting( 'up_cor_fundo_copyright', ['default' => "#1e2227" ]);
+        $wp_customize->add_setting( 'up_cor_link_copyright', ['default' => "#8a99c0" ]);
+        $wp_customize->add_setting( 'up_cor_hover_link_copyright', ['default' => "#f35c27" ]);
 
 
 
@@ -213,15 +224,29 @@ function up_color_footer_customizer( $wp_customize ) {
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,
-            'up_cor_hover_titulo_menu',
+            'up_cor_itens_menu_footer',
 
             [
-                'label' => 'Cor Hover Titulo da coluna Menu',
+                'label' => 'Cor dos Itens do Menu',
                 'section' => 'up_color_footer_section',
-                'settings' => 'up_cor_hover_titulo_menu',
+                'settings' => 'up_cor_itens_menu_footer',
             ]
         )
     );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_hover_itens_menu_footer',
+
+            [
+                'label' => 'Cor Hover dos Itens do Menu',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_hover_itens_menu_footer',
+            ]
+        )
+    );
+
 
     // Cor Icone Telefone
     $wp_customize->add_control(
@@ -298,6 +323,101 @@ function up_color_footer_customizer( $wp_customize ) {
             ]
         )
     );
+    
+    
+    // Coluna Newsletter
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_title_newsletter_footer',
+
+            [
+                'label' => 'Cor do Titulo Newsletter',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_title_newsletter_footer',
+            ]
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_button_newsletter_footer',
+
+            [
+                'label' => 'Cor do Botão',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_button_newsletter_footer',
+            ]
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_hover_button_newsletter_footer',
+
+            [
+                'label' => 'Cor do Hover do Botão',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_hover_button_newsletter_footer',
+            ]
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_hover_text_button_newsletter_footer',
+
+            [
+                'label' => 'Cor do Texto Hover do Botão',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_hover_text_button_newsletter_footer',
+            ]
+        )
+    );
+
+    // Sessão Copyright
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_fundo_copyright',
+
+            [
+                'label' => 'Cor do fundo Copyright',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_fundo_copyright',
+            ]
+        )
+    );
+    
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_link_copyright',
+
+            [
+                'label' => 'Cor dos links do copyright',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_link_copyright',
+            ]
+        )
+    );
+
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control (
+            $wp_customize,
+            'up_cor_hover_link_copyright',
+
+            [
+                'label' => 'Cor do hover dos links do copyright',
+                'section' => 'up_color_footer_section',
+                'settings' => 'up_cor_hover_link_copyright',
+            ]
+        )
+    );
+
 
 
 }

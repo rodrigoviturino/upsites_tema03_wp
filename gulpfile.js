@@ -82,7 +82,7 @@ function styles_login() {
 
 // Scripts
 function scripts() {
-    return gulp.src(['src/js/**/*.js'])
+    return gulp.src(['src/js/**/*.js', 'node_modules/bootstrap/js/src/index.js'])
         .pipe(sourcemaps.init())
         // .pipe(rollup({ plugins: [resolve(), commonjs()] }, 'umd'))
         .pipe(babel({ presets: ['@babel/env'] }))

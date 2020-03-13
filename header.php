@@ -14,7 +14,7 @@
 
 <header class="header">
 
-    <div class="header__rowTop" style="background-color: <?php echo get_theme_mod('up_cor_fundo_redesocial_header'); ?>">
+    <div class="header__rowTop">
         <div class="container header__rowTop__wrapper">
 
                 <ul class="header__rowTop__wrapper__contact">
@@ -89,7 +89,7 @@
 
     </div>
 
-    <div class="header__rowCenter" style="background-color: <?php echo get_theme_mod('up_cor_principal_header'); ?>">
+    <div class="header__rowCenter">
         <div class="container header__rowCenter__wrapper">
 
             <div class="logo">
@@ -115,15 +115,33 @@
     </div>
 
     <div class="header__rowBottom">
-        <div class="container header__rowBottom__wrapper rounded js-scroll" style="background-color: <?php echo get_theme_mod('up_cor_fundo_menu');?>" >
+        <div class="container header__rowBottom__wrapper rounded js-scroll">
             
             <nav class="navbar navbar-expand-lg navbar-light">
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+              
+                <div class="collapse navbar-collapse order-3 order-sm-3 order-lg-1" id="navbarSupportedContent">
 
-                <ul class="shop-cart order-md-2">
+                <?php
+                    if( has_nav_menu('main-menu') ) {
+                        wp_nav_menu([
+                            'theme_location' => 'main-menu',
+                            'container' => null,
+                            'container_id' => 'navbarResponsive',
+                            'menu_class' => 'navbar-nav mr-auto',
+                            'fallback_cb' => 'wp_bootstrap_navwalker::fallback',
+                            'walker'  => new wp_bootstrap_navwalker()
+                        ]);
+                    }
+
+                    
+                ?>
+                </div>
+
+                <ul class="shop-cart order-2 order-sm-2 order-lg-2">
                     <li>
                         <a href="#">
                             <i class="fas fa-search"></i>
@@ -135,23 +153,6 @@
                         </a>
                     </li>                        
                 </ul>
-              
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-                <?php
-                    if( has_nav_menu('main-menu') ) {
-                        wp_nav_menu([
-                            'theme_location' => 'main-menu',
-                            'fallback_cb' => false,
-                            'container_class' => null,
-                            'container_id' => 'navbarResponsive',
-                            'menu_class' => 'navbar-nav mr-auto'
-                        ]);
-                    }
-                ?>
-
-                  
-                </div>
             </nav>
 
         </div> <!-- end Container -->
