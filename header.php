@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link rel="stylesheet" href="./theme.min.css"> -->
-    <!-- <link rel="stylesheet" href="./fonts/fonts.css"> -->
     <title>Theme - Bauer </title>
     <?php wp_head(); ?>
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
 <header class="header">
 
@@ -103,13 +101,40 @@
                 <?php endif; ?>
             </div>
 
-            <!-- <a href="#" class="btn_budget"></a> -->
-            
-            <?php if( get_theme_mod('up_link_quote') && get_theme_mod('up_text_quote') ) : ?>
-                <a href="<?php echo get_theme_mod('up_link_quote'); ?>" class="btn_budget btn btn-lg rounded-pill d-block">
-                    <?php echo get_theme_mod('up_text_quote'); ?>
-                </a>
-            <?php endif; ?>
+            <ul class="group-icons">
+
+                <li>
+                    <div>
+                        <i class="far fa-check-square"></i>
+                    </div>
+
+                    <div>
+                        <span class="text">SO 9001</span><br>
+                        <span class="text">Certification</span>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <i class="far fa-clock"></i>
+                    </div>
+                    <div>
+                        <span class="text">24/7</span><br>
+                        <span class="text">Service</span>
+                    </div>
+                </li>
+
+                <li>
+                    <div>
+                        <i class="far fa-thumbs-up"></i>
+                    </div>
+                    <div>
+                        <span class="text">Qualified</span><br>
+                        <span class="text">Professionals</span>
+                    </div>
+                </li>
+
+            </ul>
 
         </div>
     </div>
@@ -141,18 +166,13 @@
                 ?>
                 </div>
 
-                <ul class="shop-cart order-2 order-sm-2 order-lg-2">
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-search"></i>
-                        </a>
-                    </li>    
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-shopping-cart"></i>                      
-                        </a>
-                    </li>                        
-                </ul>
+            
+                <?php if( get_theme_mod('up_link_quote') && get_theme_mod('up_text_quote') ) : ?>
+                    <a href="<?php echo get_theme_mod('up_link_quote'); ?>" class="btn_budget btn btn-lg rounded-pill d-block order-2 order-sm-2 order-lg-2">
+                        <?php echo get_theme_mod('up_text_quote'); ?>
+                    </a>
+                <?php endif; ?>
+
             </nav>
 
         </div> <!-- end Container -->

@@ -1,6 +1,6 @@
 <?php 
 // Incluir outros arquivos/functions
-require get_template_directory().'./include/setup.php';
+require get_template_directory().'/include/setup.php';
 require get_template_directory().'/include/customizer/theme-customizer.php';
 // Register Custom Navigation Walker
 require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';

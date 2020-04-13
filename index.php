@@ -1,6 +1,4 @@
-<?php 
-
-get_header(); ?>
+<?php get_header(); ?>
 
 <main style="padding: 120px 0 100px;" class="bg-secondary">
     <div class="container">
@@ -11,7 +9,7 @@ get_header(); ?>
             </div>
 
             <div class="col-md-7 offset-2">
-               <?php the_content(); ?>
+               
             </div>
             
         </div>
