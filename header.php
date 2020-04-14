@@ -109,8 +109,8 @@
                     </div>
 
                     <div>
-                        <span class="text">SO 9001</span><br>
-                        <span class="text">Certification</span>
+                        <span class="text"><?= get_theme_mod('up_txt1_rules') ?></span><br>
+                        <span class="text"><?= get_theme_mod('up_txt2_rules') ?></span>
                     </div>
                 </li>
 
@@ -119,8 +119,8 @@
                         <i class="far fa-clock"></i>
                     </div>
                     <div>
-                        <span class="text">24/7</span><br>
-                        <span class="text">Service</span>
+                        <span class="text"><?= get_theme_mod('up_txt1_jobs') ?></span><br>
+                        <span class="text"><?= get_theme_mod('up_txt2_jobs') ?></span>
                     </div>
                 </li>
 
@@ -129,8 +129,8 @@
                         <i class="far fa-thumbs-up"></i>
                     </div>
                     <div>
-                        <span class="text">Qualified</span><br>
-                        <span class="text">Professionals</span>
+                        <span class="text"><?= get_theme_mod('up_txt1_quali') ?></span><br>
+                        <span class="text"><?= get_theme_mod('up_txt2_quali') ?></span>
                     </div>
                 </li>
 

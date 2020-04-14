@@ -211,6 +211,16 @@
         color: <?php echo get_theme_mod('up_cor_text_btn_contact'); ?>;
     }
 
+    .header__rowCenter__wrapper .group-icons li:first-child .text {
+        color: <?php echo get_theme_mod('up_cor_txt_rules'); ?>;
+    }
+    .header__rowCenter__wrapper .group-icons li:nth-child(2) .text {
+        color: <?php echo get_theme_mod('up_cor_txt_jobs'); ?>;
+    }
+    .header__rowCenter__wrapper .group-icons li:last-child .text {
+        color: <?php echo get_theme_mod('up_cor_txt_quali'); ?>;
+    }
+
     /* Row Bottom - Itens do menu */
     .header__rowBottom__wrapper .navbar .navbar-nav .menu-item a {
         color: <?php echo get_theme_mod('up_cor_text_menu'); ?>;

@@ -9,8 +9,16 @@ function up_header_customizer( $wp_customize ) {
     $wp_customize->add_setting('up_link_email', ['default' => '']);
     $wp_customize->add_setting('up_endereco', ['default' => '']);
 
-    // Logo
-    $wp_customize->add_setting('up_img_logo', ['default' => '']);
+    // Row Center
+        // Logo
+        $wp_customize->add_setting('up_img_logo', ['default' => '']);
+        // Icons
+        $wp_customize->add_setting('up_txt1_rules', ['default' => '']);
+        $wp_customize->add_setting('up_txt2_rules', ['default' => '']);
+        $wp_customize->add_setting('up_txt1_jobs', ['default' => '']);
+        $wp_customize->add_setting('up_txt2_jobs', ['default' => '']);
+        $wp_customize->add_setting('up_txt1_quali', ['default' => '']);
+        $wp_customize->add_setting('up_txt2_quali', ['default' => '']);
 
     $wp_customize->add_setting('up_link_quote', ['default' => '']);
     $wp_customize->add_setting('up_text_quote', ['default' => '']);
@@ -105,6 +113,85 @@ function up_header_customizer( $wp_customize ) {
                     ]
                 )
             );
+
+            $wp_customize->add_control(
+                new WP_Customize_Control(
+                    $wp_customize,
+        
+                    'up_txt1_rules',
+                        [
+                            'label'=>'Texto linha 1 Normas/Iso9001',
+                            'section' => 'up_header_section',
+                            'settings' => 'up_txt1_rules',
+                            'type' => 'text'  
+                        ]
+                    )
+                );
+            $wp_customize->add_control(
+                new WP_Customize_Control(
+                    $wp_customize,
+        
+                    'up_txt2_rules',
+                        [
+                            'label'=>'Texto linha 2 Normas/Iso9001',
+                            'section' => 'up_header_section',
+                            'settings' => 'up_txt2_rules',
+                            'type' => 'text'  
+                        ]
+                    )
+                );
+            $wp_customize->add_control(
+                new WP_Customize_Control(
+                    $wp_customize,
+        
+                    'up_txt1_jobs',
+                        [
+                            'label'=>'Texto linha 1 Serviço',
+                            'section' => 'up_header_section',
+                            'settings' => 'up_txt1_jobs',
+                            'type' => 'text'  
+                        ]
+                    )
+                );
+            $wp_customize->add_control(
+                new WP_Customize_Control(
+                    $wp_customize,
+        
+                    'up_txt2_jobs',
+                        [
+                            'label'=>'Texto linha 2 Serviço',
+                            'section' => 'up_header_section',
+                            'settings' => 'up_txt2_jobs',
+                            'type' => 'text'  
+                        ]
+                    )
+                );
+            $wp_customize->add_control(
+                new WP_Customize_Control(
+                    $wp_customize,
+        
+                    'up_txt1_quali',
+                        [
+                            'label'=>'Texto Linha 1 Tempo de trabalho e resposta',
+                            'section' => 'up_header_section',
+                            'settings' => 'up_txt1_quali',
+                            'type' => 'text'  
+                        ]
+                    )
+                );
+            $wp_customize->add_control(
+                new WP_Customize_Control(
+                    $wp_customize,
+        
+                    'up_txt2_quali',
+                        [
+                            'label'=>'Texto Linha 2 Tempo de trabalho e resposta',
+                            'section' => 'up_header_section',
+                            'settings' => 'up_txt2_quali',
+                            'type' => 'text'  
+                        ]
+                    )
+                );
 
         //Quote
         $wp_customize->add_control(

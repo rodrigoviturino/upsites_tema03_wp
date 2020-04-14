@@ -28,6 +28,11 @@ function up_color_header_customizer( $wp_customize ) {
         $wp_customize->add_setting( 'up_cor_hover_icon_insta_header', ['default' => "#8A99C0" ]);
 
         // Row Center
+        $wp_customize->add_setting( 'up_cor_txt_rules', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_txt_jobs', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_txt_quali', ['default' => "#fff" ]);
+        $wp_customize->add_setting( 'up_cor_principal_header', ['default' => "#030F27" ]);
+        $wp_customize->add_setting( 'up_cor_principal_header', ['default' => "#030F27" ]);
         // $wp_customize->add_setting( 'up_cor_principal_header', ['default' => "#030F27" ]);
         // $wp_customize->add_setting( 'up_cor_principal_header', ['default' => "rgba(3,15,39,1)" ]);
         $wp_customize->add_setting( 'up_cor_btn_contact', ['default' => "#F35C27" ]);
