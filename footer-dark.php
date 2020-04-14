@@ -171,9 +171,9 @@
     .header__rowTop {
         background-color: <?php echo get_theme_mod('up_cor_fundo_redesocial_header'); ?>;
     }
-    .header__rowCenter {
-        background-color: <?php echo get_theme_mod('up_cor_principal_header'); ?>;
-    }
+    /* .header__rowCenter {
+        background-color: <?php// echo get_theme_mod('up_cor_principal_header'); ?>;
+    } */
     .header__rowBottom__wrapper {
         background-color: <?php echo get_theme_mod('up_cor_principal_fundo_menu'); ?>;
     }

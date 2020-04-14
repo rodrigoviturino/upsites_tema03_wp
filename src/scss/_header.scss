@@ -121,19 +121,30 @@
     }
 
     &__rowCenter {
-        position: relative;
-        background-color: rgba(3, 15, 39, 0.425);
+        background-color: rgba(3, 15, 39, 0.158);
         padding: map-get($spacers, 4) 0 map-get($spacers, 5) ;
+        position: absolute;
+        width: 100%;
+        top: 40px;
 
         @include media-breakpoint-only(xs) {
-            padding: map-get($spacers, 5) 0;
+            top: 116px;
+            padding: map-get($spacers, 3) 0;
         }
 
         &__wrapper {
             display: flex;
 
+            @include media-breakpoint-only(xs) { 
+                flex-direction: column;
+            }
+
             .logo {
                 margin-right: auto;
+
+                @include media-breakpoint-only(xs) { 
+                    margin: 0 auto map-get($spacers,3);
+                }
             }
 
             .group-icons {
@@ -144,6 +155,10 @@
                 color: #fff;
                 font-family: "Poppins", sans-serif;
 
+                @include media-breakpoint-only(xs) { 
+                    padding-left: map-get($spacers, 0);
+                }
+
                 li {
                     display: flex;
                     align-self: center;
@@ -151,12 +166,27 @@
                     margin-left: 25px;
                     line-height: 21px;
 
+                    @include media-breakpoint-only(xs) { 
+                        padding-right: map-get($spacers,3);
+                        padding-left: map-get($spacers,3);
+                        // margin-left: map-get($spacers,1);
+                        margin: 0 auto;
+                        
+                    }
+
                     &:nth-child(2) {
                         border: solid 1px rgba(138, 153, 192, 0.2);
                         border-top-style: none;
                         border-bottom-style: none;
                         padding-left: 28px;
                         padding-right: 28px;
+
+                        @include media-breakpoint-only(xs) { 
+                            padding: 0 map-get($spacers,2);
+                            // margin-left: map-get($spacers,1);
+                            margin: map-get($spacers ,0);
+                            
+                        }
                     }
 
                     i {
@@ -164,11 +194,20 @@
                         font-weight: $font-weight-light;
                         margin-right: map-get($spacers, 3);
                         @include responsive-font-size(28px);
+
+                        @include media-breakpoint-only(xs) { 
+                            margin-right: map-get($spacers, 2);
+                            @include responsive-font-size(14px);
+                        }
                     }
                 
                     .text {
                         font-weight: $font-weight-normal;
                         @include responsive-font-size(15px);
+                        
+                        @include media-breakpoint-only(xs) { 
+                            @include responsive-font-size(11px);
+                        }
                     } 
                                        
                 }

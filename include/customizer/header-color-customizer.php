@@ -28,7 +28,8 @@ function up_color_header_customizer( $wp_customize ) {
         $wp_customize->add_setting( 'up_cor_hover_icon_insta_header', ['default' => "#8A99C0" ]);
 
         // Row Center
-        $wp_customize->add_setting( 'up_cor_principal_header', ['default' => "#030F27" ]);
+        // $wp_customize->add_setting( 'up_cor_principal_header', ['default' => "#030F27" ]);
+        // $wp_customize->add_setting( 'up_cor_principal_header', ['default' => "rgba(3,15,39,1)" ]);
         $wp_customize->add_setting( 'up_cor_btn_contact', ['default' => "#F35C27" ]);
         $wp_customize->add_setting( 'up_cor_text_btn_contact', ['default' => "#FFF" ]);
         
@@ -234,18 +235,18 @@ function up_color_header_customizer( $wp_customize ) {
 
         // Row Center - Logo
         // Color Background <Footer>
-    $wp_customize->add_control(
-        new WP_Customize_Color_Control (
-            $wp_customize,
-            'up_cor_principal_header',
+    // $wp_customize->add_control(
+    //     new WP_Customize_Color_Control (
+    //         $wp_customize,
+    //         'up_cor_principal_header',
 
-            [
-                'label' => 'Cor de Fundo da Logo',
-                'section' => 'up_color_header_section',
-                'settings' => 'up_cor_principal_header',
-            ]
-        )
-    );
+    //         [
+    //             'label' => 'Cor de Fundo da Logo',
+    //             'section' => 'up_color_header_section',
+    //             'settings' => 'up_cor_principal_header',
+    //         ]
+    //     )
+    // );
     $wp_customize->add_control(
         new WP_Customize_Color_Control (
             $wp_customize,

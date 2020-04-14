@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main style="padding: 120px 0 100px;" class="bg-secondary">
+<main style="padding: 300px 0 100px; background-image: url('<?= get_template_directory_uri(); ?> /public/images/bg-01.jpg');" class="bg-secondary">
     <div class="container">
         <div class="row justify-content-cente text-center">
             
