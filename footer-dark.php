@@ -91,7 +91,7 @@
                     <h5 class="title">Contacts</h5>
                     <?php if( get_theme_mod('up_horario_funcionamento') ) : ?>
                         <p>
-                            <i class="far fa-clock"></i>
+                            <i class="fas fa-clock"></i>
                             <?php echo get_theme_mod('up_horario_funcionamento'); ?>
                         </p>
                     <?php endif; ?>

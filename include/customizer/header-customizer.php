@@ -198,23 +198,9 @@ function up_header_customizer( $wp_customize ) {
             new WP_Customize_Control(
                 $wp_customize,
     
-                'up_link_quote',
-                    [
-                        'label'=>'Link do Call to Action',
-                        'section' => 'up_header_section',
-                        'settings' => 'up_link_quote',
-                        'type' => 'text'  
-                    ]
-                )
-            );
-    
-        $wp_customize->add_control(
-            new WP_Customize_Control(
-                $wp_customize,
-    
                 'up_text_quote',
                     [
-                        'label'=>'Texto do Quote',
+                        'label'=>'Texto do Botão Contato',
                         'section' => 'up_header_section',
                         'settings' => 'up_text_quote',
                         'type' => 'text'  
@@ -222,6 +208,19 @@ function up_header_customizer( $wp_customize ) {
                 )
             );
 
+        $wp_customize->add_control(
+            new WP_Customize_Control(
+                $wp_customize,
+    
+                'up_link_quote',
+                    [
+                        'label'=>'Link do Botão Contato',
+                        'section' => 'up_header_section',
+                        'settings' => 'up_link_quote',
+                        'type' => 'text'  
+                    ]
+                )
+            );
 
     // Row Bottom
         // Rede Social 
