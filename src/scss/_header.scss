@@ -11,6 +11,9 @@
             @include media-breakpoint-only(xs) {
                 flex-direction: column;
             }
+            @include media-breakpoint-only(sm) {
+                align-items: center;
+            }
 
             /* Column Left*/
             &__contact {
@@ -26,8 +29,18 @@
                     align-items: flex-start;
                     margin-bottom: map-get($spacers, 1);
                 }
+                @include media-breakpoint-only(sm) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-bottom: map-get($spacers, 1);
+                }
 
                 li {
+
+                    @include media-breakpoint-only(sm) { 
+                        width: 100%;
+                        text-align: left;
+                    }
 
                     &:nth-child(even) {
 
@@ -43,6 +56,9 @@
                             @include media-breakpoint-only(xs) { 
                                 content: unset;
                             }
+                            @include media-breakpoint-only(sm) { 
+                                content: unset;
+                            }
                         }
 
                         &:after {
@@ -55,6 +71,9 @@
                             vertical-align: middle;
 
                             @include media-breakpoint-only(xs) { 
+                                content: unset;
+                            }
+                            @include media-breakpoint-only(sm) { 
                                 content: unset;
                             }
                         }
@@ -131,6 +150,9 @@
             top: 116px;
             padding: map-get($spacers, 3) 0;
         }
+        @include media-breakpoint-only(sm) {
+            top: 79px;
+        }
 
         &__wrapper {
             display: flex;
@@ -138,11 +160,17 @@
             @include media-breakpoint-only(xs) { 
                 flex-direction: column;
             }
+            @include media-breakpoint-only(sm) { 
+                flex-direction: column;
+            }
 
             .logo {
                 margin-right: auto;
 
                 @include media-breakpoint-only(xs) { 
+                    margin: 0 auto map-get($spacers,3);
+                }
+                @include media-breakpoint-only(sm) { 
                     margin: 0 auto map-get($spacers,3);
                 }
             }
@@ -158,6 +186,10 @@
                 @include media-breakpoint-only(xs) { 
                     padding-left: map-get($spacers, 0);
                 }
+                @include media-breakpoint-only(sm) { 
+                    padding-left: map-get($spacers, 0);
+                    justify-content: center;
+                }
 
                 li {
                     display: flex;
@@ -171,7 +203,12 @@
                         padding-left: map-get($spacers,3);
                         // margin-left: map-get($spacers,1);
                         margin: 0 auto;
-                        
+                    }
+                    @include media-breakpoint-only(sm) { 
+                        padding-right: map-get($spacers,3);
+                        padding-left: map-get($spacers,3);
+                        // margin-left: map-get($spacers,1);
+                        margin: 0 map-get($spacers, 2);
                     }
 
                     &:nth-child(2) {
@@ -185,7 +222,11 @@
                             padding: 0 map-get($spacers,2);
                             // margin-left: map-get($spacers,1);
                             margin: map-get($spacers ,0);
-                            
+                        }
+                        @include media-breakpoint-only(sm) { 
+                            padding: 0 map-get($spacers,3);
+                            // margin-left: map-get($spacers,1);
+                            margin: map-get($spacers ,0);
                         }
                     }
 
@@ -199,6 +240,10 @@
                             margin-right: map-get($spacers, 2);
                             @include responsive-font-size(14px);
                         }
+                        @include media-breakpoint-only(sm) { 
+                            margin-right: map-get($spacers, 2);
+                            @include responsive-font-size(15px);
+                        }
                     }
                 
                     .text {
@@ -206,6 +251,9 @@
                         @include responsive-font-size(15px);
                         
                         @include media-breakpoint-only(xs) { 
+                            @include responsive-font-size(11px);
+                        }
+                        @include media-breakpoint-only(sm) { 
                             @include responsive-font-size(11px);
                         }
                     } 
@@ -225,6 +273,9 @@
 
         @include media-breakpoint-only(xs) {
             top: 250px;
+        }
+        @include media-breakpoint-only(sm) {
+            top: 223px;
         }
 
         &__wrapper {
