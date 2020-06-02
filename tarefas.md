@@ -1,0 +1,2 @@
+- Precisa aplicar o plugin 'kirki' via codigo, para estilizar font-family geral.
+  - tema de referencia: tema 04
