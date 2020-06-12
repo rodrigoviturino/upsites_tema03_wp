@@ -4,8 +4,8 @@ function up_theme_styles(){
     $version = date('hmi');
 
     // CSS
-    wp_enqueue_style('theme_css', get_template_directory_uri().'./public/theme.min.css', [], $version, false );
-    wp_enqueue_style('fontawesome_css', get_template_directory_uri().'./public/fonts/fonts.css', [], $version, false );
+    wp_enqueue_style('theme_css', get_template_directory_uri().'/public/theme.min.css', [], $version, false );
+    wp_enqueue_style('fontawesome_css', get_template_directory_uri().'/public/fonts/fonts.css', [], $version, false );
 
     // Javascript
 

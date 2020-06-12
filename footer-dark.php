@@ -13,7 +13,7 @@
                     if(get_theme_mod('up_img_logo') && get_theme_mod('up_description_logo_footer')) : 
                 ?>
                     <a href="<?php bloginfo(url); ?>">
-                        <img src="<?php echo $img_logo_footer ?> './public/images/logo-footer.png' " alt="<?php echo get_theme_mod('up_description_logo_footer'); ?>" class="img-fluid">                    
+                        <img src="<?php echo $img_logo_footer ?> '/public/images/logo-footer.png' " alt="<?php echo get_theme_mod('up_description_logo_footer'); ?>" class="img-fluid">                    
                     </a>
                 <?php endif; ?>
 
